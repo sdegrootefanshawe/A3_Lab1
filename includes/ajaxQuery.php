@@ -10,12 +10,12 @@
 	$mysqli->set_charset("utf8");
 
 	// set some post stuff up here
-	$modelNo = $_GET["model"];	
+	$modelNo = $_GET["model"];
 
 	$myQuery = "SELECT * FROM mainmodel WHERE model = '$modelNo'";
 	$result = mysqli_query($mysqli, $myQuery);
-	$row = mysqli_fetch_assoc($result);	
+	$row = mysqli_fetch_assoc($result);
 
 	echo json_encode($row);
-	//echo mysqli_num_rows($result);			
+	// echo mysqli_num_rows($result);			
 ?>
